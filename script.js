@@ -52,4 +52,12 @@ const users = [
   { id: 7, age: 25 },
 ];
 
-function selectedAge(arr) {}
+function selectedAge(arr) {
+  arr.forEach((value, index) => {
+    if (value.age > 18 && value.age < 21) {
+      console.log(value.id);
+    }
+  });
+}
+
+selectedAge(users);
