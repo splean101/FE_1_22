@@ -1,10 +1,10 @@
 //1.
 
-const users = ['Mike', 'Nikola', 'Tom'];
-console.log(users[2]);
-users[1] = 'Alex';
-users.length = 1;
-console.log(users.length);
+const names = ['Mike', 'Nikola', 'Tom'];
+console.log(names[2]);
+names[1] = 'Alex';
+names.length = 1;
+console.log(names.length);
 
 //2.
 
@@ -12,15 +12,12 @@ const a = [5, 3, -4, 25, 32, -16, 6];
 const b = [21, -30, 9, 5, 12, -19, 5, 25];
 
 function compare(arr1, arr2) {
-  const minLength = a.length > b.length ? a.length : b.length;
-  for (let i = 0; i < minLength; i++) {
-    if (arr1[i] > arr2[i]) {
-      console.log(`a[${i}] > b[${i}]`);
-    } else if (arr1[i] < arr2[i]) {
-      console.log(`a[${i}] < b[${i}]`);
-    } else {
-      console.log(`a[${i}] = b[${i}]`);
-    }
+  if (arr1.length > arr2.length) {
+    console.log(`a > b`);
+  } else if (arr1.length < arr2.length) {
+    console.log(`a < b`);
+  } else {
+    console.log(`a = b`);
   }
 }
 
@@ -55,6 +52,4 @@ const users = [
   { id: 7, age: 25 },
 ];
 
-function selectedAge(arr){
-  
-}
+function selectedAge(arr) {}
